@@ -1,0 +1,38 @@
+.container{
+    width: 97%;
+    margin:0px;
+}
+.nav-area{background-color:#4c8cfe;margin: 0px auto; height: 50px;}
+.nav-area .inner-nav{overflow:hidden;}
+.nav-area .logo-left{float:left; width: 50%;}
+.nav-area .logo-left img{width: 70px; height: 70px;margin-top: 0px; bottom: 0px; border: 2px solid rgb(90, 183, 254); border-top: none;background-color: white;padding: 5px;border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;}
+.nav-area .link-right{float:right; width: 50%;}
+.nav-area .link-right ul{padding:0px; margin-top: 15px; list-style-type: none; text-align: right;}
+.nav-area .link-right ul li{display: inline-block;}
+.nav-area .link-right ul li span {font-size: 1rem;  color: #fff;display: block; padding: 0px 15px;}
+.nav-area .Linkkk{text-decoration: none;}
+.nav-area label{padding: 5px; font-size: 26px; display: none;}
+#toggle{display: none;}
+
+@media(max-width:768px){
+    .nav-area  label{display:block; cursor: pointer; float: right;}
+    .link-right {text-align: center; width: 100px; display: none;}
+    .nav-area ul li .Linkkk{display: block; text-align: right; padding: 5px; background-color: black; }
+    #toggle:checked + .link-right{display: block;}
+    .nav-area .link-right ul li{display: block;}
+}
+@media(min-width:769){
+    .nav-area  label{display:block; cursor: pointer; float: right;}
+    .link-right {text-align: center; width: 100px; display: none;}
+    .nav-area ul li .Linkkk{display: block; text-align: center;  padding: 10px; background: rgba(97, 66, 66, 0.7);z-index: 2; position: fixed; }
+    #toggle:checked + .link-right{display: block; width: 100px;}
+    .nav-area .link-right ul li{display: block;}
+}
+@media(max-width:998px){
+    .nav-area  label{display:block; cursor: pointer; float: right;}
+    .link-right {text-align: center; width: 100px; display: none;}
+    .nav-area ul li .Linkkk{display: block; text-align: center;  padding: 10px;background: rgba(97, 66, 66, 0.7);z-index: 2; }
+    #toggle:checked + .link-right{display: block;}
+    .nav-area .link-right ul li{display: block;}
+        }

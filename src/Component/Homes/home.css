@@ -1,0 +1,8 @@
+.home-maindiv{color: #212121;}
+.home-maindiv .heading h5{font-size: 1.64rem; margin: 0px 0 0.656rem 0;font-weight: 400;font-family: "Roboto", sans-serif;}
+.home-maindiv p{margin-top: 15px;line-height: 1.5; font-size: 15px;font-family: "Roboto", sans-serif;}
+.home-maindiv p span{color:#50b153; font-weight: bold; }
+.home-maindiv p .underline{text-decoration: underline;}
+.home-maindiv p .publication-ethic-statement{color: #039be5;}
+.home-maindiv .red{color: red;}
+.home-maindiv .red .btn{background-color:rgb(20, 168, 20) ; text-decoration: none; padding: 7px; border-radius: 50%;}

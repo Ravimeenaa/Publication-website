@@ -1,0 +1,26 @@
+*{
+  margin: 0rem;
+}
+.main{
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+.section{
+display: flex;
+margin-top: 5px;  
+margin-bottom:60px;
+}
+@media(max-width:998px){
+  .main .main_body .section{
+    font-size:55%; 
+    display:inline-block;  
+    width:100%;
+  }
+}
+@media(max-width:768px){
+  .main .main_body .section{
+    font-size:45%;
+    display:inline-block;   
+    width:100%;
+  }
+}
