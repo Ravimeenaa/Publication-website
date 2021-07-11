@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from 'react'; 
 import ReactDom from "react-router-dom";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import axios from 'axios'
 import "./editorial.css";
 
+
 function Editorial() {
+const gitHubUrl = "https://jsonplaceholder.typicode.com/users";
+
+const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    getGitHubUserWithFetch();
+  },[] );
+
+  const getGitHubUserWithFetch = async () => {
+    const response = await axios.get(gitHubUrl);
+    console.log(response)
+    setUserData(response.data);
+  };
   return (
     <>
+    
       <div className="Editorial-maindiv">
         <div className="heading">
           <h5>Editorial Committee IJATSR</h5>
@@ -23,11 +38,11 @@ function Editorial() {
           </p>
         </div>
         <div className="maindiv">
-          <p className="name">Editorial Board Member: <b>Dr. Emad D A Kaky, Ph.D.</b></p>
+        <p className="name">Editorial Board Member:{userData.length > 0 && (<b>{userData[0].name}</b>)}</p>
           <p className="discripation">
             <b>Associate Researcher, Lecturer</b>
             <br/>
-            Email: emadd.abbas@spu.edu.iq
+            Email: {userData.length > 0 && (<b>{userData[0].email}</b>)}
           </p>
           <p className="discripation">
            <ul>
@@ -38,11 +53,11 @@ function Editorial() {
           </p>
         </div>
         <div className="maindiv">
-          <p className="name">Editorial Board Member: <b>Dr. Shubham Agarwal, Ph.D.</b></p>
+        <p className="name">Editorial Board Member:{userData.length > 0 && (<b>{userData[1].name}</b>)}</p>
           <p className="discripation">
             <b>Associate Professor</b>
             <br/>
-            Email: meshubhamagarwal@gmail.com
+            Email: {userData.length > 0 && (<b>{userData[1].email}</b>)}
           </p>
           <p className="discripation">
            <ul>
@@ -54,11 +69,11 @@ function Editorial() {
           </p>
         </div>
         <div className="maindiv">
-          <p className="name">Editorial Board Member: <b>Dr. Emad D A Kaky, Ph.D.</b></p>
+          <p className="name">Editorial Board Member:{userData.length > 0 && (<b>{userData[2].name}</b>)}</p>
           <p className="discripation">
             <b>Associate Researcher, Lecturer</b>
             <br/>
-            Email: emadd.abbas@spu.edu.iq
+            Email: {userData.length > 0 && (<b>{userData[2].email}</b>)}
           </p>
           <p className="discripation">
            <ul>
@@ -70,6 +85,7 @@ function Editorial() {
         </div>
 
       </div>
+
     </>
   );
 }
